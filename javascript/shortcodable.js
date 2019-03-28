@@ -83,6 +83,8 @@
                         var newContent = shortcodable.replaceShortcodesWithPlaceholders(ed.getContent(), ed.getInstance());
                         console.log(newContent);
                         ed.setContent(newContent);
+                        // this might introduce bugs when rendering shortcode placeholders
+                        ed.save();
                     });
                 }
             },
